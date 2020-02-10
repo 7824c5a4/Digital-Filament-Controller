@@ -1,0 +1,513 @@
+EESchema Schematic File Version 4
+LIBS:Digital Current Supply-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:L7805 U1
+U 1 1 5E150751
+P 5450 3150
+F 0 "U1" H 5450 3392 50  0000 C CNN
+F 1 "L7805" H 5450 3301 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5475 3000 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5450 3100 50  0001 C CNN
+	1    5450 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0101
+U 1 1 5E1515C3
+P 5000 3000
+F 0 "#PWR0101" H 5000 2850 50  0001 C CNN
+F 1 "+12V" H 5015 3173 50  0000 C CNN
+F 2 "" H 5000 3000 50  0001 C CNN
+F 3 "" H 5000 3000 50  0001 C CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3000 5000 3150
+Wire Wire Line
+	5000 3150 5150 3150
+$Comp
+L power:GND #PWR0102
+U 1 1 5E152B8C
+P 5450 3600
+F 0 "#PWR0102" H 5450 3350 50  0001 C CNN
+F 1 "GND" H 5455 3427 50  0000 C CNN
+F 2 "" H 5450 3600 50  0001 C CNN
+F 3 "" H 5450 3600 50  0001 C CNN
+	1    5450 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3450 5450 3600
+$Comp
+L Device:C C1
+U 1 1 5E153D7B
+P 4650 4750
+F 0 "C1" H 4765 4796 50  0000 L CNN
+F 1 "100 nF" H 4765 4705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4688 4600 50  0001 C CNN
+F 3 "~" H 4650 4750 50  0001 C CNN
+	1    4650 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5E1545BA
+P 4400 4750
+F 0 "#PWR0103" H 4400 4500 50  0001 C CNN
+F 1 "GND" H 4405 4577 50  0000 C CNN
+F 2 "" H 4400 4750 50  0001 C CNN
+F 3 "" H 4400 4750 50  0001 C CNN
+	1    4400 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E154CBD
+P 5050 4750
+F 0 "R1" H 5120 4796 50  0000 L CNN
+F 1 "470k" H 5120 4705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4980 4750 50  0001 C CNN
+F 3 "~" H 5050 4750 50  0001 C CNN
+	1    5050 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Potentiometer_Digital:DS3502 U2
+U 1 1 5E1547C8
+P 5700 4900
+F 0 "U2" V 6281 4900 50  0000 C CNN
+F 1 "DS3502" V 6190 4900 50  0000 C CNN
+F 2 "Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP1.73x1.98mm" H 4950 4300 50  0001 C CNN
+F 3 "" H 4950 4300 50  0001 C CNN
+	1    5700 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E1593DC
+P 6000 4200
+F 0 "R2" V 5793 4200 50  0000 C CNN
+F 1 "15k" V 5884 4200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5930 4200 50  0001 C CNN
+F 3 "~" H 6000 4200 50  0001 C CNN
+	1    6000 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 4200 5800 4500
+$Comp
+L power:GND #PWR0104
+U 1 1 5E159D0C
+P 6250 4200
+F 0 "#PWR0104" H 6250 3950 50  0001 C CNN
+F 1 "GND" H 6255 4027 50  0000 C CNN
+F 2 "" H 6250 4200 50  0001 C CNN
+F 3 "" H 6250 4200 50  0001 C CNN
+	1    6250 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5E15AF32
+P 6250 4750
+F 0 "#PWR0105" H 6250 4500 50  0001 C CNN
+F 1 "GND" H 6255 4577 50  0000 C CNN
+F 2 "" H 6250 4750 50  0001 C CNN
+F 3 "" H 6250 4750 50  0001 C CNN
+	1    6250 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 4750 6200 4750
+Wire Wire Line
+	6100 5050 6200 5050
+Wire Wire Line
+	6200 5050 6200 4900
+Connection ~ 6200 4750
+Wire Wire Line
+	6200 4750 6250 4750
+Wire Wire Line
+	6100 4900 6200 4900
+Connection ~ 6200 4900
+Wire Wire Line
+	6200 4900 6200 4750
+Wire Wire Line
+	5800 4200 5850 4200
+Wire Wire Line
+	6150 4200 6250 4200
+Wire Wire Line
+	4400 4750 4500 4750
+Wire Wire Line
+	4800 4750 4850 4750
+Wire Wire Line
+	5200 4750 5300 4750
+Text GLabel 5900 3150 2    50   Input ~ 0
++5V
+Wire Wire Line
+	5750 3150 5900 3150
+Text GLabel 4850 4500 1    50   Input ~ 0
++5V
+Wire Wire Line
+	4850 4500 4850 4750
+Connection ~ 4850 4750
+Wire Wire Line
+	4850 4750 4900 4750
+Wire Wire Line
+	4850 4750 4850 4900
+Wire Wire Line
+	4850 4900 5200 4900
+Wire Wire Line
+	5200 4900 5200 5050
+Wire Wire Line
+	5200 5050 5300 5050
+Connection ~ 5200 4900
+Wire Wire Line
+	5200 4900 5300 4900
+Text GLabel 5650 5500 3    50   Input ~ 0
+SDA
+Wire Wire Line
+	5650 5300 5650 5500
+Text GLabel 5800 5500 3    50   Input ~ 0
+SCL
+Wire Wire Line
+	5800 5500 5800 5300
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5E170962
+P 3400 2750
+F 0 "J2" V 3272 2830 50  0000 L CNN
+F 1 "i2c" V 3363 2830 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 3400 2750 50  0001 C CNN
+F 3 "~" H 3400 2750 50  0001 C CNN
+	1    3400 2750
+	0    1    1    0   
+$EndComp
+Text GLabel 3300 2400 1    50   Input ~ 0
+SCL
+Wire Wire Line
+	3400 2400 3400 2550
+Text GLabel 3400 2400 1    50   Input ~ 0
+SDA
+Wire Wire Line
+	3300 2400 3300 2550
+$Comp
+L Device:C C2
+U 1 1 5E17F081
+P 7500 4000
+F 0 "C2" V 7248 4000 50  0000 C CNN
+F 1 "10nF" V 7339 4000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 7538 3850 50  0001 C CNN
+F 3 "~" H 7500 4000 50  0001 C CNN
+	1    7500 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 3450 7800 4000
+Wire Wire Line
+	7800 4000 7650 4000
+Wire Wire Line
+	7200 3550 7000 3550
+Wire Wire Line
+	7000 3550 7000 4000
+Wire Wire Line
+	7000 4000 7350 4000
+$Comp
+L Device:R R3
+U 1 1 5E183297
+P 7500 4350
+F 0 "R3" V 7707 4350 50  0000 C CNN
+F 1 "1k" V 7616 4350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7430 4350 50  0001 C CNN
+F 3 "~" H 7500 4350 50  0001 C CNN
+	1    7500 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7000 4000 7000 4350
+Wire Wire Line
+	7000 4350 7350 4350
+Connection ~ 7000 4000
+$Comp
+L Device:R R5
+U 1 1 5E18579A
+P 8250 4350
+F 0 "R5" V 8043 4350 50  0000 C CNN
+F 1 "100m" V 8134 4350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 8135 4350 50  0001 C CNN
+F 3 "~" H 8250 4350 50  0001 C CNN
+	1    8250 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7650 4350 8050 4350
+$Comp
+L power:GND #PWR0106
+U 1 1 5E188CFF
+P 8650 4350
+F 0 "#PWR0106" H 8650 4100 50  0001 C CNN
+F 1 "GND" H 8655 4177 50  0000 C CNN
+F 2 "" H 8650 4350 50  0001 C CNN
+F 3 "" H 8650 4350 50  0001 C CNN
+	1    8650 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8400 4350 8650 4350
+$Comp
+L Device:R R4
+U 1 1 5E18A4AF
+P 8000 3450
+F 0 "R4" V 7793 3450 50  0000 C CNN
+F 1 "100R" V 7884 3450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7930 3450 50  0001 C CNN
+F 3 "~" H 8000 3450 50  0001 C CNN
+	1    8000 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 3450 7850 3450
+$Comp
+L Amplifier_Operational:LM358 U3
+U 1 1 5E18BF95
+P 7500 3450
+F 0 "U3" H 7500 3800 50  0000 C CNN
+F 1 "LM358" H 7550 3700 50  0000 C CNN
+F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm" H 7500 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7500 3450 50  0001 C CNN
+	1    7500 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 7800 3450
+$Comp
+L Amplifier_Operational:LM358 U3
+U 3 1 5E18DB6D
+P 7500 3450
+F 0 "U3" H 7500 3400 50  0000 L CNN
+F 1 "LM358" H 7500 3300 50  0000 L CNN
+F 2 "" H 7500 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 7500 3450 50  0001 C CNN
+	3    7500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0107
+U 1 1 5E193247
+P 7400 3050
+F 0 "#PWR0107" H 7400 2900 50  0001 C CNN
+F 1 "+12V" H 7415 3223 50  0000 C CNN
+F 2 "" H 7400 3050 50  0001 C CNN
+F 3 "" H 7400 3050 50  0001 C CNN
+	1    7400 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3050 7400 3150
+$Comp
+L power:GND #PWR0108
+U 1 1 5E19CA14
+P 7300 3750
+F 0 "#PWR0108" H 7300 3500 50  0001 C CNN
+F 1 "GND" H 7305 3577 50  0000 C CNN
+F 2 "" H 7300 3750 50  0001 C CNN
+F 3 "" H 7300 3750 50  0001 C CNN
+	1    7300 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 3750 7400 3750
+$Comp
+L SamacSys_Parts:IRF530NPBF Q1
+U 1 1 5E1A0A40
+P 8450 3450
+F 0 "Q1" H 8880 3596 50  0000 L CNN
+F 1 "IRF530NPBF" H 8880 3505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8900 3400 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/IRF530NPBF.pdf" H 8900 3300 50  0001 L CNN
+F 4 "IRF530NPBF N-Channel MOSFET, 17 A, 100 V HEXFET, 3-Pin TO-220AB Infineon" H 8900 3200 50  0001 L CNN "Description"
+F 5 "4.69" H 8900 3100 50  0001 L CNN "Height"
+F 6 "942-IRF530NPBF" H 8900 3000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=942-IRF530NPBF" H 8900 2900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Infineon" H 8900 2800 50  0001 L CNN "Manufacturer_Name"
+F 9 "IRF530NPBF" H 8900 2700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8450 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3450 8450 3450
+Wire Wire Line
+	8750 3650 8050 3650
+Wire Wire Line
+	8050 3650 8050 4350
+Connection ~ 8050 4350
+Wire Wire Line
+	8050 4350 8100 4350
+Text GLabel 5350 4250 1    50   Input ~ 0
+RH
+Wire Wire Line
+	5600 4500 5350 4500
+Wire Wire Line
+	5350 4500 5350 4250
+Text GLabel 6950 3250 1    50   Input ~ 0
+RH
+Wire Wire Line
+	6950 3250 6950 3350
+Wire Wire Line
+	6950 3350 7200 3350
+Text Notes 7350 7500 0    50   ~ 0
+Digital Current Source
+Text Notes 8111 7635 0    50   ~ 0
+1/7/2020
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5E213DCC
+P 3800 2750
+F 0 "J3" V 3672 2830 50  0000 L CNN
+F 1 "12vin" V 3763 2830 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 3800 2750 50  0001 C CNN
+F 3 "~" H 3800 2750 50  0001 C CNN
+	1    3800 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR0110
+U 1 1 5E214407
+P 3700 2400
+F 0 "#PWR0110" H 3700 2250 50  0001 C CNN
+F 1 "+12V" H 3650 2650 50  0000 C CNN
+F 2 "" H 3700 2400 50  0001 C CNN
+F 3 "" H 3700 2400 50  0001 C CNN
+	1    3700 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2400 3700 2550
+$Comp
+L power:GND #PWR0111
+U 1 1 5E215936
+P 3800 2400
+F 0 "#PWR0111" H 3800 2150 50  0001 C CNN
+F 1 "GND" H 3750 2150 50  0000 C CNN
+F 2 "" H 3800 2400 50  0001 C CNN
+F 3 "" H 3800 2400 50  0001 C CNN
+	1    3800 2400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3800 2400 3800 2550
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 5E21BC3E
+P 4250 2750
+F 0 "J4" V 4122 2830 50  0000 L CNN
+F 1 "12vout" V 4213 2830 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 4250 2750 50  0001 C CNN
+F 3 "~" H 4250 2750 50  0001 C CNN
+	1    4250 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR0112
+U 1 1 5E21D08F
+P 4150 2400
+F 0 "#PWR0112" H 4150 2250 50  0001 C CNN
+F 1 "+12V" H 4100 2650 50  0000 C CNN
+F 2 "" H 4150 2400 50  0001 C CNN
+F 3 "" H 4150 2400 50  0001 C CNN
+	1    4150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5E21D70B
+P 4250 2400
+F 0 "#PWR0113" H 4250 2150 50  0001 C CNN
+F 1 "GND" H 4200 2150 50  0000 C CNN
+F 2 "" H 4250 2400 50  0001 C CNN
+F 3 "" H 4250 2400 50  0001 C CNN
+	1    4250 2400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 2400 4150 2550
+Wire Wire Line
+	4250 2400 4250 2550
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5E22511F
+P 2850 2750
+F 0 "J1" V 2722 2830 50  0000 L CNN
+F 1 "5vout" V 2813 2830 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 2850 2750 50  0001 C CNN
+F 3 "~" H 2850 2750 50  0001 C CNN
+	1    2850 2750
+	0    1    1    0   
+$EndComp
+Text GLabel 2750 2400 1    50   Input ~ 0
++5V
+$Comp
+L power:GND #PWR0114
+U 1 1 5E225C42
+P 2850 2450
+F 0 "#PWR0114" H 2850 2200 50  0001 C CNN
+F 1 "GND" H 2800 2200 50  0000 C CNN
+F 2 "" H 2850 2450 50  0001 C CNN
+F 3 "" H 2850 2450 50  0001 C CNN
+	1    2850 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2850 2450 2850 2550
+Wire Wire Line
+	2750 2400 2750 2550
+$Comp
+L Connector:Screw_Terminal_01x02 J5
+U 1 1 5E242BCD
+P 2850 3700
+F 0 "J5" V 2722 3780 50  0000 L CNN
+F 1 "FILout" V 2813 3780 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 2850 3700 50  0001 C CNN
+F 3 "~" H 2850 3700 50  0001 C CNN
+	1    2850 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR0109
+U 1 1 5E244122
+P 2750 3300
+F 0 "#PWR0109" H 2750 3150 50  0001 C CNN
+F 1 "+12V" H 2700 3550 50  0000 C CNN
+F 2 "" H 2750 3300 50  0001 C CNN
+F 3 "" H 2750 3300 50  0001 C CNN
+	1    2750 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 3300 2750 3500
+Text GLabel 2850 3400 1    50   Input ~ 0
+FILin
+Wire Wire Line
+	2850 3400 2850 3500
+Text GLabel 8750 2850 1    50   Input ~ 0
+FILin
+Wire Wire Line
+	8750 2850 8750 3050
+Text Label 7000 3550 2    50   ~ 0
+lm358inv
+Text Notes 7100 6950 0    197  ~ 0
+7824c5a4
+$EndSCHEMATC
